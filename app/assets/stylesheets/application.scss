@@ -3,6 +3,8 @@
 @import 'form';
 @import 'buttons';
 @import 'common';
+@import 'board';
+@import 'flash';
 html {
     word-spacing: 1px;
     -ms-text-size-adjust: 100%;
@@ -30,4 +32,9 @@ body {
 .container {
     padding: 16px 16px;
     width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
