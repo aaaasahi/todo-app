@@ -1,0 +1,36 @@
+.board {
+    color: #000000;
+    background-color: #f4f4f4;
+    margin: 16px 0;
+    border: 1px solid #EBEBEB;
+    border-radius: 10px;
+    &_content {
+        padding: 15px 20px;
+    }
+    &_name {
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 6px;
+    }
+    &_description {
+        font-size: 14px;
+        line-height: 19px;
+        opacity: 0.4;
+        margin-bottom: 20px;
+    }
+    &_icon {
+        width: 30px;
+    }
+    &_new {
+        padding: 30px;
+        border: 1px dashed rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        text-align: center;
+        text-decoration: none;
+    }
+    &_actions {
+        right: 25px;
+        position: absolute;
+        cursor: pointer;
+    }
+}

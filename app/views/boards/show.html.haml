@@ -1,0 +1,15 @@
+.container
+  .board
+    .board_content
+      .board_name
+        = @board.name
+      .board_actions
+        .dropdown
+          = image_tag 'actions.svg', class: 'dropbtn'
+          .dropdown-content.mini
+            = link_to "編集する", edit_board_path(@board)
+            = link_to "削除する", board_path(@board), data: { method: 'delete', confirm: '本当に削除してよろしいですか？' }
+      .board_description
+        = @board.description
+      .board_avatar
+        = image_tag 'default-avatar.png', class: 'board_icon'

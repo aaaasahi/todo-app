@@ -1,1 +1,16 @@
-board
+.container
+  %h2.title All Boards
+  - @boards.each do |board|
+    = link_to board_path(board) do
+      .board
+        .board_content
+          .board_name
+            = board.name
+          .board_description
+            = board.description
+          .board_avatar
+            = image_tag 'default-avatar.png', class: 'board_icon'
+
+  = link_to new_board_path do
+    .board_new 
+      Add New Card
