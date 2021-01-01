@@ -15,8 +15,11 @@
       .dropdown
         = image_tag 'default-avatar.png', class: 'header_avatar dropbtn'
         .dropdown-content
-          %a{:href => "#"} プロフィール
-          %a{:href => "#"} ログアウト
+          - if user_signed_in?
+            = link_to "ログアウト", destroy_user_session_path, data: { method: 'delete' }
+          - else
+            = link_to "ログイン", new_user_session_path
+            = link_to "新規登録", new_user_registration_path
     %hr.line
     - if flash.present?
       .flash

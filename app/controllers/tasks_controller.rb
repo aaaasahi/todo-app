@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-    
+    before_action :authenticate_user!, only: [:new, :create, :edit,:update,:destroy]
     def index
         @board = Board.find(params[:board_id])
         @task = @board.tasks.all
@@ -58,7 +58,7 @@ class TasksController < ApplicationController
 
     private
     def task_params
-        params.require(:task).permit(:name,:description)
+        params.require(:task).permit(:name,:description,:eyecatch)
     end
 
 end

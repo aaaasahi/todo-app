@@ -1,5 +1,6 @@
 @import './variables';
 .btn-primary {
+    position: absolute;
     background-color: #F8BD1C;
     border: none;
     width: 90%;
@@ -8,5 +9,5 @@
     padding: 16px 0;
     font-weight: bold;
     position: absolute;
-    bottom: 30px;
+    top: 889px;
 }
