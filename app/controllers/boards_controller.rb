@@ -1,4 +1,7 @@
 class BoardsController < ApplicationController
+    before_action :authenticate_user!, only: [:new, :create, :edit,:update,:destroy]
+
+
     def index
         @boards = Board.all
     end
@@ -46,4 +49,5 @@ class BoardsController < ApplicationController
     def board_params
         params.require(:board).permit(:name,:description)
     end
+
 end

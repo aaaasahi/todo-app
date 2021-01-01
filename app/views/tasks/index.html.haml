@@ -4,6 +4,9 @@
   - @task.each do |task|
     = link_to board_task_path(@board.id,task.id) do
       .board
+        - if task.eyecatch.attached?
+          .board_image
+            = image_tag task.eyecatch
         .board_content
           .board_name
             = task.name

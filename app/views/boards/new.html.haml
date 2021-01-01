@@ -1,14 +1,1 @@
-.container
-  %ul
-    - @board.errors.full_messages.each do |message|
-      %li= message
-  = form_with(model: @board, local: true) do |f|
-    %div
-      = f.label 'Name'
-    %div
-      = f.text_field :name, class: 'text'
-    %div
-      = f.label 'Description'
-    %div
-      = f.text_area :description
-    = f.submit 'submit', class: 'btn-primary'
+= render 'commons/form', board: @board
