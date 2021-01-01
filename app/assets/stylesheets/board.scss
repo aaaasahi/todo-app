@@ -41,3 +41,16 @@
     position: absolute;
     cursor: pointer;
 }
+
+.comment {
+    color: #000000;
+    margin: 16px 0;
+    display: flex;
+    &_icon {
+        width: 30px;
+    }
+    &_description {
+        margin-left: 25px;
+        padding: 5px;
+    }
+}
