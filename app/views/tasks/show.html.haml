@@ -10,3 +10,15 @@
   .board
     .board-content
       = @task.description
+
+  %h2.title Comment
+  - @comments.each do |comment|
+    .comment
+      .comment_avatar
+        = image_tag 'default-avatar.png', class: 'comment_icon'
+      .comment_description
+        = comment.description
+
+  = link_to new_board_task_comment_path(board_id: @board.id,task_id: @task.id) do
+    .board_new 
+      Add New Comment

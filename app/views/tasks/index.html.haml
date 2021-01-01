@@ -1,7 +1,7 @@
 .container
   %h2.title 
     = @board.name
-  - @tasks.each do |task|
+  - @task.each do |task|
     = link_to board_task_path(@board.id,task.id) do
       .board
         .board_content

@@ -2,12 +2,13 @@ class TasksController < ApplicationController
     
     def index
         @board = Board.find(params[:board_id])
-        @tasks = Task.all
+        @task = @board.tasks.all
     end
 
     def show
-        board = Board.find(params[:board_id])
-        @task = board.tasks.find(params[:id])
+        @board = Board.find(params[:board_id])
+        @task = @board.tasks.find(params[:id])
+        @comments = @task.comments
     end
 
     def new
