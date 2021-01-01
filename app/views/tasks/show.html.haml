@@ -1,0 +1,12 @@
+.container
+  %h2.title 
+    = @task.name
+  .task-actions
+    .dropdown
+      = image_tag 'actions.svg', class: 'dropbtn'
+      .dropdown-content.mini
+        = link_to "編集する", edit_board_task_path(@task.board)
+        = link_to "削除する", board_task_path(@task.board), data: { method: 'delete', confirm: '本当に削除してよろしいですか？' }
+  .board
+    .board-content
+      = @task.description
