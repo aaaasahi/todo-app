@@ -13,7 +13,9 @@
           .board_description
             = task.description
           .board_avatar
-            = image_tag 'default-avatar.png', class: 'board_icon'
+            = image_tag task.user.avatar_image, class: 'board_icon'
+          .board_comment
+            = task.comment_count
 
   = link_to new_board_task_path do
     .board_new 

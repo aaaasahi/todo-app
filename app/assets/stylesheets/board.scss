@@ -50,6 +50,9 @@ $container-padding: 10px;
         position: absolute;
         cursor: pointer;
     }
+    &_comment {
+        margin-left: 350px;
+    }
 }
 
 .task-actions {
