@@ -19,7 +19,7 @@
   - @comments.each do |comment|
     .comment
       .comment_avatar
-        = image_tag 'default-avatar.png', class: 'comment_icon'
+        = image_tag comment.user.avatar_image, class: 'comment_icon'
       .comment_description
         = comment.description
 

@@ -12,12 +12,16 @@
     %header.header
       %p.header_pageTitle 
         = link_to "Boards", root_path
-      .dropdown
-        = image_tag 'default-avatar.png', class: 'header_avatar dropbtn'
-        .dropdown-content
-          - if user_signed_in?
+      - if user_signed_in?
+        .dropdown
+          = image_tag current_user.avatar_image, class: 'header_avatar dropbtn'
+          .dropdown-content
+            = link_to "プロフィール", profile_path
             = link_to "ログアウト", destroy_user_session_path, data: { method: 'delete' }
-          - else
+      - else
+        .dropdown
+          = image_tag 'default-avatar.png', class: 'header_avatar dropbtn'
+          .dropdown-content
             = link_to "ログイン", new_user_session_path
             = link_to "新規登録", new_user_registration_path
     %hr.line

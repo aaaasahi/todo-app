@@ -14,4 +14,4 @@
         .board_description
           = @board.description
         .board_avatar
-          = image_tag 'default-avatar.png', class: 'board_icon'
+          = image_tag @board.user.avatar_image, class: 'board_icon'
